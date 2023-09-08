@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import Select, { selectClasses } from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import { Typography } from '@mui/material';
 export default function Navber({categoryid ,setCategoryid}) {
   const navigate = useNavigate()
   const Catagories = [
@@ -63,6 +64,7 @@ export default function Navber({categoryid ,setCategoryid}) {
             transform: 'rotate(-180deg)',
           },
         },
+        display:{md:'flex',xs:'none'}
       }}
     >
       {Catagories?.map((item,id)=>(

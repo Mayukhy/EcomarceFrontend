@@ -9,11 +9,11 @@ import axios from 'axios'
 import Contact from './components/Contact'
 import Category from './components/Category'
 function App() {
-  const [categoryid ,setCategoryid] =useState()
+  const [categoryid ,setCategoryid] =useState('Smartphones')
   const [products,setProducts] = useState([])
   useEffect(()=>{
     const fetchData = async()=>{
-    await axios.get('https://dummyjson.com/products')
+    await axios.get('https://dummyjson.com/products?limit=0')
     .then(({data})=>{setProducts(data?.products)
     console.log(products)})
     }
